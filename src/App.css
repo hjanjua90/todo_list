@@ -3,54 +3,105 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #282c42;
+  background-color: #4952fe;
 }
-
-.container {
+.todo-form-wrapper{
+  width: 400px;
   display: flex;
-  height: 80vh;
-  border: 1px solid gray;
-  padding: 20px;
   flex-direction: column;
-  align-items: center;
-  font-size: 20px;
-  color: white;
-}
-
-.todoForm{
-  display: flex;
-  justify-content: space-around;
-  width: 450px
+  align-items: flex-start;
+  justify-content: center;
 }
 input{
-  width: 80%;
-  padding: 10px;
-  border-radius: 20px;
+  padding: 2px 10px !important;
+  height: 35px;
+  outline: none;
   border: none;
+  font-size: 16px;
+  width: calc(100% - 20px) !important;
+  background: none;
+  border-bottom: 1px solid #303030;
 }
-
-button {
-  border:none;
-  padding: 10px;  
-  border-radius:20px;
-  margin: 0 5px;
+.btn-wrapper{
+  width: 400px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px 0; 
 }
-
-.allTodos{
-  list-style: none;
-  margin: 0;
-  padding: 0;
+button{
+  padding: 2px 15px;
+  height: 35px;
+  outline: none;
+  border-radius: 8px;
+  color: #1089FF;
+  font-size: 16px;
+  background-color: #E5E5E5;
+  border: none;
+  transition: all 0.1s linear;
 }
-
+button:hover{
+  box-shadow: 0 3px 5px #30303086;
+}
+.container{
+  background-color: #10afff;
+  padding: 10px;
+  border:2px solid black;
+  border-radius: 10px;
+}
 .singleTodo{
-  border-radius: 50px;
-  margin: 10px 0;
-  background-color: #5dadf8;
-  padding: 10px 20px;
+  list-style-type: none;
   display: flex;
-  width: 450px;
   align-items: center;
+  margin: 5px 0;
+
+
+}
+.allTodos{
+  margin: 0;
+  padding:0;
 }
 .todoText{
-  flex: 1
+  flex-grow: 1;
+}
+.singleTodo button{
+  width:35px;
+  display: grid;
+  place-items: center;
+  padding: 0px;
+  margin-left: 5px;
+
+}
+.singleTodo .editBtn{
+  color:rgb(41, 128, 0)
+}
+.singleTodo .deleteBtn{
+  color: rgba(255, 0, 0, 0.902)
+}
+.singleTodo.hide{
+  display: none;
+}
+.alertMessage{
+  position: absolute;
+  top: 20px;
+  left:50%;
+  transform:translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.845);
+  color:red;
+  line-height:  30px;
+  padding: 0 20px;
+}
+.alertMessage.hide{
+  display: none;
+}
+.dropDown{
+  height:30px;
+  background: none;
+  border:1px solid black;
+  outline: none;
+  border-radius: 9px;
+
+};
+.add button{
+  font-size: 16px;
 }
